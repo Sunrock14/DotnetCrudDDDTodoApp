@@ -21,13 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Application.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.API.Tests", "tests\TodoApp.API.Tests\TodoApp.API.Tests.csproj", "{8DDC16A6-D603-4DA7-A96D-974EED5DE7D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{91A7C7B0-1DE5-4175-8DC6-FA3B8508C213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Shared", "shared\TodoApp.Shared\TodoApp.Shared.csproj", "{605AFEE6-19F9-44AA-8CB2-D03180DA6415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{114FD1B1-344B-40AB-BBD7-51EA631274E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,6 +59,13 @@ Global
 		{8DDC16A6-D603-4DA7-A96D-974EED5DE7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DDC16A6-D603-4DA7-A96D-974EED5DE7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DDC16A6-D603-4DA7-A96D-974EED5DE7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605AFEE6-19F9-44AA-8CB2-D03180DA6415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605AFEE6-19F9-44AA-8CB2-D03180DA6415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605AFEE6-19F9-44AA-8CB2-D03180DA6415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605AFEE6-19F9-44AA-8CB2-D03180DA6415}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{114FD1B1-344B-40AB-BBD7-51EA631274E2} = {9AB2A7F2-333D-4AE9-828A-23A46A3BB514}
@@ -67,5 +75,6 @@ Global
 		{99C64D67-79A2-4ED5-AD76-539AF1536466} = {E3B37BD5-2F7B-4CF6-A047-D96B5199D2FD}
 		{51F1350B-DF51-4E61-91BE-0CF7222228A1} = {E3B37BD5-2F7B-4CF6-A047-D96B5199D2FD}
 		{8DDC16A6-D603-4DA7-A96D-974EED5DE7D8} = {E3B37BD5-2F7B-4CF6-A047-D96B5199D2FD}
+		{605AFEE6-19F9-44AA-8CB2-D03180DA6415} = {91A7C7B0-1DE5-4175-8DC6-FA3B8508C213}
 	EndGlobalSection
 EndGlobal

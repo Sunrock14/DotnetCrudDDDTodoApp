@@ -16,7 +16,9 @@ public class TodoTask : BaseEntity
     public Guid? AssignedToId { get; private set; }
     public User AssignedTo { get; private set; }
 
-    private TodoTask() { } // EF Core için  
+    private TodoTask() 
+    {
+    }
 
     public TodoTask(string title, string description, DateTime dueDate, Priority priority,
         Guid categoryId, Guid createdById)

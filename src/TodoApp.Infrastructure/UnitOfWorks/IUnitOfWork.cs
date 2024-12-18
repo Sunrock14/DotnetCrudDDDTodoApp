@@ -1,4 +1,6 @@
-﻿namespace TodoApp.Infrastructure.UnitOfWorks;
+﻿using TodoApp.Infrastructure.Repositories;
+
+namespace TodoApp.Infrastructure.UnitOfWorks;
 
 public interface IUnitOfWork : IDisposable
 {

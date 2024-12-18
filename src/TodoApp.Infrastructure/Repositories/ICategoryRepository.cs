@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TodoApp.Infrastructure.Repositories;
 
-namespace TodoApp.Infrastructure.Repositories
+public interface ICategoryRepository
 {
-    internal interface ICategoryRepository
-    {
-    }
 }
