@@ -1,20 +1,16 @@
-﻿using MediatR;
-using TodoApp.Application.DTOs.Users;
+﻿namespace TodoApp.Application.Features.Commands.Users.UserCreate;
 
-namespace TodoApp.Application.Features.Commands.Users.UserCreate
+public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
+    public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
     {
-        public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
-        {
-            //DO somethink
+        //DO somethink
 
-            return new()
-            {
-                Id = Guid.NewGuid(),
-                Email = request.Email,
-                Username = request.Username,
-            };
-        }
+        return new()
+        {
+            Id = Guid.NewGuid(),
+            Email = request.Email,
+            Username = request.Username,
+        };
     }
 }

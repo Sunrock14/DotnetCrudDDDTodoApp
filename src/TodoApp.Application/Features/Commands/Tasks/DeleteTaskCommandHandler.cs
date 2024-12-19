@@ -1,6 +1,15 @@
-﻿using MediatR;
+﻿namespace TodoApp.Application.Features.Commands.Tasks;
 
-namespace TodoApp.Application.Features.Commands.Tasks.DeleteTask;
+
+public class DeleteUserCommandResponse
+{
+    public string Message { get; set; }
+}
+
+public class DeleteTaskCommandRequest : IRequest<DeleteUserCommandResponse>
+{
+    public Guid Id { get; set; }
+}
 
 public class DeleteTaskCommandHandler : IRequestHandler<DeleteTaskCommandRequest, DeleteUserCommandResponse>
 {

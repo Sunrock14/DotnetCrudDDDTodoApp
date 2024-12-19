@@ -1,7 +1,4 @@
-﻿using FluentValidation;
-using TodoApp.Application.Features.Commands.Tasks;
-
-namespace TodoApp.Application.Features.Validators.Tasks;
+﻿namespace TodoApp.Application.Features.Validators.Tasks;
 
 public class CreateTaskValidator : AbstractValidator<CreateTaskCommandRequest>
 {

@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TodoApp.Domain.Entities;
-
-namespace TodoApp.Infrastructure.Contexts;
+﻿namespace TodoApp.Infrastructure.Contexts;
 
 public class TaskConfiguration : IEntityTypeConfiguration<TodoTask>
 {

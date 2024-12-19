@@ -1,7 +1,4 @@
-﻿using MediatR;
-using TodoApp.Domain.Entities;
-
-namespace TodoApp.Application.Features.Commands.Tasks;
+﻿namespace TodoApp.Application.Features.Commands.Tasks;
 
 public class CreateTaskCommandResponse
 {

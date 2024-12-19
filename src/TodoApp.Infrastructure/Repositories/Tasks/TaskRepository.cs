@@ -1,5 +1,9 @@
-﻿namespace TodoApp.Infrastructure.Repositories.Tasks;
+﻿
+namespace TodoApp.Infrastructure.Repositories.Tasks;
 
-internal class TaskRepository
+public class TaskRepository : BaseRepository<TodoTask>, ITaskRepository
 {
+    public TaskRepository(DbContext context) : base(context)
+    {
+    }
 }

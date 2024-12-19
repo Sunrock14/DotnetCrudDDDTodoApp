@@ -1,0 +1,13 @@
+﻿global using TodoApp.Domain.ComplexTypes;
+global using TodoApp.Domain.Entities;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using TodoApp.Infrastructure.Contexts;
+global using TodoApp.Infrastructure.Repositories.Categories;
+global using TodoApp.Infrastructure.Repositories.Tasks;
+global using TodoApp.Infrastructure.Repositories.Users;
+global using TodoApp.Infrastructure.UnitOfWorks;
+global using MediatR;
+global using FluentValidation;
+global using TodoApp.Application.Features.Commands.Tasks;

@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TodoApp.Domain.Entities;
+﻿namespace TodoApp.Infrastructure.Contexts;
 
-namespace TodoApp.Infrastructure.Contexts;
-
-public class ApplicationDbContext : DbContext
+public class TodoContext : DbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public TodoContext(DbContextOptions<TodoContext> options)
         : base(options)
     {
     }
@@ -18,6 +14,6 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(TodoContext).Assembly);
     }
 }
