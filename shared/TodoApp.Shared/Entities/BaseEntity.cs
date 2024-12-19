@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TodoApp.Shared.Entities;
 
-namespace TodoApp.Shared.Entities
+public class BaseEntity
 {
-    internal class BaseEntity
-    {
-    }
+    public virtual Guid Id { get; set; }
+    public virtual DateTime CreatedDate { get; set; } = DateTime.Now;
+    public virtual DateTime ModifiedDate { get; set; } = DateTime.Now;
+    public virtual bool IsActive { get; set; } = true;
+    public virtual string CreatedByName { get; set; } = "Created By System";
+    public virtual string ModifiedByName { get; set; } = "Created By System";
+    public virtual string Note { get; set; } = string.Empty;
 }

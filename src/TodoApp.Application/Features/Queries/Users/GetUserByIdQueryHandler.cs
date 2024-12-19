@@ -4,7 +4,7 @@ using TodoApp.Shared.Responses;
 
 namespace TodoApp.Application.Features.Queries.Users;
 
-public class GetUserByIdQueryResponse : BaseDto
+public class GetUserByIdQueryResponse : PaginatedDto
 {
 
 }

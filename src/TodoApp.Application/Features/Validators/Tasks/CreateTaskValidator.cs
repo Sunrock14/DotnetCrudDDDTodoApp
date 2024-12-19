@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TodoApp.Application.Features.Commands.Tasks.CreateTask;
+using TodoApp.Application.Features.Commands.Tasks;
 
 namespace TodoApp.Application.Features.Validators.Tasks;
 

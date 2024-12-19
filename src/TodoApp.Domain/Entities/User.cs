@@ -1,6 +1,7 @@
-﻿namespace TodoApp.Domain.Entities;
+﻿
+namespace TodoApp.Domain.Entities;
 
-public class User : BaseEntity
+public class User : BaseEntity, IEntity
 {
     public string FirstName { get; private set; } = default!;
     public string LastName { get; private set; } = default!;

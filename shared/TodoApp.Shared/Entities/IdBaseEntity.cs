@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TodoApp.Shared.Entities;
 
-namespace TodoApp.Shared.Entities
+public class IdBaseEntity
 {
-    internal class BaseEntity
-    {
-    }
+    public virtual Guid Id { get; set; }
+
 }

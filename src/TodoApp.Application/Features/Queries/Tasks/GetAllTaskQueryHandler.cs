@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using TodoApp.Shared.Entities;
+using TodoApp.Shared.Responses;
 
-namespace TodoApp.Application.Features.Queries.Tasks
+namespace TodoApp.Application.Features.Queries.Tasks;
+
+public class GetAllQueryResponse : PaginatedDto
 {
-    internal class GetAllTaskQueryHandler
+}
+public class GetallTaskQueryRequest : IRequest<IDataResponse<GetAllQueryResponse>>
+{
+}
+public class GetAllTaskQueryHandler : IRequestHandler<GetallTaskQueryRequest, IDataResponse<GetAllQueryResponse>>
+{
+    public async Task<IDataResponse<GetAllQueryResponse>> Handle(GetallTaskQueryRequest request, CancellationToken cancellationToken)
     {
+        return new DataResponse<GetAllQueryResponse>(true, "", new GetAllQueryResponse
+        {
+
+        });
     }
 }

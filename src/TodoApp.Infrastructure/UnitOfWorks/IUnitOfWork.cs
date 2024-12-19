@@ -1,4 +1,6 @@
-﻿using TodoApp.Infrastructure.Repositories;
+﻿using TodoApp.Infrastructure.Repositories.Categories;
+using TodoApp.Infrastructure.Repositories.Tasks;
+using TodoApp.Infrastructure.Repositories.Users;
 
 namespace TodoApp.Infrastructure.UnitOfWorks;
 

@@ -1,6 +1,8 @@
-﻿namespace TodoApp.Domain.Entities;
+﻿
 
-public class Category : BaseEntity
+namespace TodoApp.Domain.Entities;
+
+public class Category : BaseEntity, IEntity
 {
     public string Name { get; private set; } = default!;
     public string Description { get; private set; } = default!;

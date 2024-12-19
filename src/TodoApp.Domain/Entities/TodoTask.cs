@@ -1,8 +1,8 @@
-﻿using TodoApp.Domain.ComplexTypes;
+﻿
 
 namespace TodoApp.Domain.Entities;
 
-public class TodoTask : BaseEntity
+public class TodoTask : BaseEntity, IEntity
 {
     public string Title { get; private set; }
     public string Description { get; private set; }
@@ -16,7 +16,7 @@ public class TodoTask : BaseEntity
     public Guid? AssignedToId { get; private set; }
     public User AssignedTo { get; private set; }
 
-    private TodoTask() 
+    private TodoTask()
     {
     }
 
@@ -31,18 +31,19 @@ public class TodoTask : BaseEntity
         CategoryId = categoryId;
         CreatedById = createdById;
         Status = Status.Todo;
-        CreatedAt = DateTime.UtcNow;
+        CreatedDate = DateTime.UtcNow;
     }
 
     public void AssignTo(Guid userId)
     {
         AssignedToId = userId;
-        UpdatedAt = DateTime.UtcNow;
+        ModifiedDate = DateTime.UtcNow;
+        ModifiedByName = userId.ToString();
     }
 
     public void UpdateStatus(Status newStatus)
     {
         Status = newStatus;
-        UpdatedAt = DateTime.UtcNow;
+        ModifiedDate = DateTime.UtcNow;
     }
 }

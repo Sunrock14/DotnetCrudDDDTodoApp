@@ -4,7 +4,7 @@ using TodoApp.Shared.Responses;
 
 namespace TodoApp.Application.Features.Queries.Users;
 
-public class GetAllUserQueryResponse : BaseDto
+public class GetAllUserQueryResponse : PaginatedDto
 {
     //Dto alanı
     public string Title { get; set; } = default!;
