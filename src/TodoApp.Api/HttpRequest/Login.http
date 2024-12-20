@@ -1,0 +1,50 @@
+@TodoApp.Api_HostAddress = https://localhost:7041
+
+### Tüm Kullanýcýlarý Listele (GetAllUsers)  
+GET {{TodoApp.Api_HostAddress}}/Login/GetAllUsers  
+Content-Type: application/json  
+
+{  
+  "usernameFilter": "faruk",   
+  "emailFilter": "faruk@nela.com",
+  "sortBy": "fackfaruk",       
+  "isAscending": true,       
+  "size": 10,                 
+  "page": 1                  
+
+###  
+
+### Kullanýcýyý ID ile Getir (GetUserById)  
+GET {{TodoApp.Api_HostAddress}}/Login/GetUserById/1  
+Content-Type: application/json  
+
+###  
+
+### Yeni Kullanýcý Ekle (AddNewUser)  
+POST {{TodoApp.Api_HostAddress}}/Login/AddNewUser  
+Content-Type: application/json  
+
+{  
+  "username": "fackfakir",  
+  "email": "kim@nerdela.com",  
+  "password": "nasi123sifre"  
+}  
+
+###  
+
+### Kullanýcý Güncelle (UpdateUser)  
+PUT {{TodoApp.Api_HostAddress}}/Login/UpdateUser  
+Content-Type: application/json  
+
+{  
+  "id": 1,  
+  "username": "yorudum",  
+  "email": "ne@1".com",  
+  "password": "2333333333333333@123"  
+}  
+
+###  
+
+### Kullanýcýyý ID ile Sil (DeleteUserById)  
+DELETE {{TodoApp.Api_HostAddress}}/Login/DeleteUserById/1  
+Content-Type: application/json

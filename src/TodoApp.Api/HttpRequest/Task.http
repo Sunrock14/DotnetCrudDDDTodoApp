@@ -1,0 +1,61 @@
+@TodoApp.Api_HostAddress = https://localhost:7041
+
+### Tüm Görevleri Listele (GetAllTasks)  
+GET {{TodoApp.Api_HostAddress}}/Task/GetAllTasks  
+Content-Type: application/json  
+
+{  
+  "filter": "completed",  
+  "sortBy": "priority",   
+  "isAscending": true     
+}  
+
+###  
+
+### Yeni Görev Ekle (AddNewTask)  
+POST {{TodoApp.Api_HostAddress}}/Task/AddNewTask  
+Content-Type: application/json  
+
+{  
+  "title": "Silersin aslan",  
+  "description": "yitetrrrrrr",  
+  "priority": 2,          
+  "dueDate": "2024-12-31T23:59:59"  
+}  
+
+###  
+
+### Görev Güncelle (UpdateTask)  
+PUT {{TodoApp.Api_HostAddress}}/Task/UpdateTask  
+Content-Type: application/json  
+
+{  
+  "id": 1,  
+  "title": "sflkdjsdf",  
+  "description": "Uasdfadsfas",  
+  "priority": 1,           
+  "dueDate": "2024-12-25T23:59:59"  
+}  
+
+###  
+
+### Görev Sil (DeleteTask)  
+DELETE {{TodoApp.Api_HostAddress}}/Task/DeleteTask/1  
+Content-Type: application/json  
+
+###  
+
+### Görevi ID ile Getir (GetTaskById)  
+GET {{TodoApp.Api_HostAddress}}/Task/GetTaskById/1  
+Content-Type: application/json  
+
+###  
+
+### Görevi Kullanýcýya Ata (AssignTaskToUser)  
+POST {{TodoApp.Api_HostAddress}}/Task/AssignTaskToUser  
+Content-Type: application/json  
+
+{  
+  "taskId": 1,  
+  "userId": 42  
+}

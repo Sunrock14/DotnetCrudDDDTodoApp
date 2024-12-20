@@ -1,0 +1,40 @@
+@TodoApp.Api_HostAddress = https://localhost:7041
+
+### Yeni Kategori Ekle (AddNewCategory)  
+POST {{TodoApp.Api_HostAddress}}/Category/AddNewCategory  
+Content-Type: application/json  
+
+{  
+  "name": "ADANALI",  
+  "description": "Hayýrdýr lan kardeþ"  
+}  
+
+###  
+
+### Kategori Güncelle (UpdateCategory)  
+PUT {{TodoApp.Api_HostAddress}}/Category/UpdateCategory  
+Content-Type: application/json  
+
+{  
+  "id": 1,  
+  "name": "ADANALI",  
+  "description": "Hayýrdýr lan kardeþ"  
+}  
+
+###  
+
+### Kategori Sil (DeleteCategory)  
+DELETE {{TodoApp.Api_HostAddress}}/Category/DeleteCategory/1  
+Content-Type: application/json  
+
+###  
+
+### Tüm Kategorileri Listele (GetAllCategories)  
+GET {{TodoApp.Api_HostAddress}}/Category/GetAllCategories  
+Content-Type: application/json  
+
+###  
+
+### Kategoriyi ID ile Getir (GetCategoryById)  
+GET {{TodoApp.Api_HostAddress}}/Category/GetCategoryById/1  
+Content-Type: application/json  

@@ -1,0 +1,36 @@
+@TodoApp.Api_HostAddress = https://localhost:7041
+
+//Ekmek banmalýk requestler 
+
+### Kullanýcý Kaydý (Register)  
+POST {{TodoApp.Api_HostAddress}}/Auth/Register  
+Content-Type: application/json  
+{  
+  "username": "UserNamemFarukcum",  
+  "email": "farukcumm@hatýrla.com",  
+  "password": "SifremNeydi94?"  
+}  
+
+###  
+
+### Kullanýcý Giriþi (Login)  
+POST {{TodoApp.Api_HostAddress}}/Auth/Login  
+Content-Type: application/json  
+{  
+  "email": "farukcumm@hatýrla.com",  
+  "password": "SifremNeydi94?"  
+}  
+
+###  
+
+### JWT Token Yenileme (RefreshToken)  
+POST {{TodoApp.Api_HostAddress}}/Auth/RefreshToken  
+Content-Type: application/json  
+{  
+  "refreshToken": "token-ver-vermezsen-küserim"  
+}  
+###  
+
+### Kullanýcý Çýkýþý (Logout)  
+POST {{TodoApp.Api_HostAddress}}/Auth/Logout  
+Content-Type: application/json
