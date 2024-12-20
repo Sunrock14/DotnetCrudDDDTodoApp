@@ -1,4 +1,7 @@
-﻿namespace TodoApp.Application.Features.Commands.Tasks;
+﻿using AutoMapper;
+using TodoApp.Shared.Responses;
+
+namespace TodoApp.Application.Features.Commands.Tasks;
 
 public class CreateTaskCommandResponse
 {
@@ -6,7 +9,7 @@ public class CreateTaskCommandResponse
     public string Message { get; set; } = string.Empty;
 }
 
-public class CreateTaskCommandRequest : IRequest<CreateTaskCommandResponse>
+public class CreateTaskCommandRequest : IRequest<IDataResponse<CreateTaskCommandResponse>>
 {
     public string Name { get; set; }
     public string Body { get; set; }
@@ -15,15 +18,18 @@ public class CreateTaskCommandRequest : IRequest<CreateTaskCommandResponse>
     public User AssignId { get; set; }
 }
 
-public class CreateTaskCommandHandler : IRequestHandler<CreateTaskCommandRequest, CreateTaskCommandResponse>
+public class CreateTaskCommandHandler(IMapper _mapper, IUnitOfWork _unitOfWork) 
+    : IRequestHandler<CreateTaskCommandRequest, IDataResponse<CreateTaskCommandResponse>>
 {
-    public async Task<CreateTaskCommandResponse> Handle(CreateTaskCommandRequest request, CancellationToken cancellationToken)
+    public async Task<IDataResponse<CreateTaskCommandResponse>> Handle(CreateTaskCommandRequest request, CancellationToken cancellationToken)
     {
-        //Do Somethink
-        return new()
+        //Diğer endpointlerde de yap böyle bişiler 
+        var mappedTask = _mapper.Map<TodoTask>(request);
+        await _unitOfWork.Tasks.AddAsync(mappedTask);
+        return new DataResponse<CreateTaskCommandResponse>(true, "OK", new CreateTaskCommandResponse()
         {
             IsSuccess = true,
             Message = ""
-        };
+        });
     }
 }

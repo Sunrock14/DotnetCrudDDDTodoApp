@@ -1,4 +1,4 @@
-﻿namespace TodoApp.Application.Helpers;
+﻿namespace TodoApp.Application.Helpers.JwtToken;
 
 public interface IJwtService
 {

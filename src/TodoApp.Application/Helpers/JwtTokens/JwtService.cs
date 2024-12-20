@@ -4,11 +4,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace TodoApp.Application.Helpers;
-
+namespace TodoApp.Application.Helpers.JwtToken;
 
 public class JwtManager : IJwtService
 {
+    //TODO : Appsetting'e taşınacak
     private string secret = "asdlkşgjasd";
 
     public string GenerateJwtToken(User user)
@@ -57,6 +57,7 @@ public class JwtManager : IJwtService
 
     private static ClaimsIdentity GenerateClaims(User user)
     {
+        // TODO : Diğer bilgiler eklenebilir
         var claims = new ClaimsIdentity(new[] {
             new Claim("Id", user.Id.ToString()),
             new Claim("UserName", user.FirstName),
