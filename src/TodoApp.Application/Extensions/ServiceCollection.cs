@@ -16,7 +16,7 @@ public static class ServiceCollection
 
     public static void LoadCustomServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<TodoContext>(options => options.UseSqlServer(configuration.GetConnectionString("StarDbConn"))
+        services.AddDbContext<TodoContext>(options => options.UseSqlServer(configuration.GetConnectionString("TodoApp"))
             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
