@@ -8,6 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.LoadCustomServices(builder.Configuration);
 builder.Services.LoadMediatRService();
+builder.Services.LoadAutoMapperService();
 builder.Services.LoadConfigureSwagger(builder.Configuration);
 builder.Services.LoadConfigureJWTAuthentication(builder.Configuration);
 var app = builder.Build();

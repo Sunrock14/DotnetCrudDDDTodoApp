@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using TodoApp.Shared.Responses;
-
-namespace TodoApp.Application.Features.Commands.Tasks;
+﻿namespace TodoApp.Application.Features.Commands.Tasks;
 
 public class CreateTaskCommandResponse
 {
@@ -23,7 +20,7 @@ public class CreateTaskCommandHandler(IMapper _mapper, IUnitOfWork _unitOfWork)
 {
     public async Task<IDataResponse<CreateTaskCommandResponse>> Handle(CreateTaskCommandRequest request, CancellationToken cancellationToken)
     {
-        //Diğer endpointlerde de yap böyle bişiler 
+        //Diğer endpointlerde de yap böyle bişiler
         var mappedTask = _mapper.Map<TodoTask>(request);
         await _unitOfWork.Tasks.AddAsync(mappedTask);
         return new DataResponse<CreateTaskCommandResponse>(true, "OK", new CreateTaskCommandResponse()
@@ -31,5 +28,6 @@ public class CreateTaskCommandHandler(IMapper _mapper, IUnitOfWork _unitOfWork)
             IsSuccess = true,
             Message = ""
         });
+        throw new Exception();
     }
 }
